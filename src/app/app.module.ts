@@ -9,6 +9,7 @@ import { ShowClicksComponent } from './components/show-clicks/show-clicks.compon
 import { LoggerComponent } from './components/logger/logger.component';
 import { SwitchThemeComponent } from './components/switch-theme/switch-theme.component';
 import { ShowThemeComponent } from './components/show-theme/show-theme.component';
+import { TimerComponent } from './components/timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShowThemeComponent } from './components/show-theme/show-theme.component
     ShowClicksComponent,
     LoggerComponent,
     SwitchThemeComponent,
-    ShowThemeComponent
+    ShowThemeComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
