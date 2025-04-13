@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ClickerService } from "../services/clicker.service";
+import { ClickerService } from "../../services/clicker.service";
 
 @Component({
   selector: 'app-show-clicks',
@@ -8,10 +8,10 @@ import { ClickerService } from "../services/clicker.service";
   styleUrl: './show-clicks.component.css'
 })
 export class ShowClicksComponent {
-  value! : number
+  public getClicks():number{return 0}
   constructor(private clicker : ClickerService){
     setInterval(() => {
-      this.value = clicker.getValue()
+      this.getClicks = () => {return clicker.getValue()}
     }, 10);
   }
 }

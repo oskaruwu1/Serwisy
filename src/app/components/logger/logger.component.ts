@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoggerService } from '../services/logger.service';
+import { LoggerService } from '../../services/logger.service';
 import $ from 'jquery';
 
 @Component({
@@ -21,11 +21,10 @@ export class LoggerComponent {
     }
     this.displayLogs = () => {
       $("#logs").html("")
-      
       for (let log of logger.getLogs()){
-        console.log(log)
-        $("#logs").html($("#logs").html() + `<span>${log}</span><br>`)
+        $("#logs").html(`<span>${log}</span><br>` + $("#logs").html())
       }
+      $("#loginput").focus()
     }
   }
 }

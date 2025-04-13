@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.dark{
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+body{
+    margin: 0;
+    padding: 8px;
+}

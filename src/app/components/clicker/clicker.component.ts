@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ClickerService } from "../services/clicker.service";
+import { ClickerService } from "../../services/clicker.service";
 
 @Component({
   selector: 'app-clicker',
