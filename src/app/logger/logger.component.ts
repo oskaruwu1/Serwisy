@@ -13,6 +13,7 @@ export class LoggerComponent {
   constructor(logger: LoggerService){
     this.log = (msg) => {
       logger.log(msg)
+      this.msg = ""
     }
   }
 }

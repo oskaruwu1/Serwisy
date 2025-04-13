@@ -9,7 +9,7 @@ import { ClickerService } from "../services/clicker.service";
 })
 export class ClickerComponent {
   inc(){}
-  constructor(clicker: ClickerService){
+  constructor(private clicker: ClickerService){
     this.inc = () => {
       clicker.increment()
     }
