@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ClickerService {
-  clicks: number = 0;
+  private clicks: number = 0;
   increment(){
-    this.clicks += 1;
+    this.clicks++;
     this.getValue()
   }
   getValue(){

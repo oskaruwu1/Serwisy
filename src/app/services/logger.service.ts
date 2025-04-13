@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoggerService {
-  logs: string[] = []
+  private logs: string[] = []
   log(msg: string = ""){
-    console.log("(" + (new Date()).toString() + ") " + msg)
-    this.logs.push("(" + (new Date()).toString() + ") " + msg)
+    console.log("(" + (new Date()).toLocaleString() + ") " + msg)
+    this.logs.push("(" + (new Date()).toLocaleString() + ") " + msg)
   }
-  showLogs(){
+  getLogs(){
     return this.logs
   }
 }
