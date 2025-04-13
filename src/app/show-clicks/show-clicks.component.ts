@@ -9,7 +9,7 @@ import { ClickerService } from "../services/clicker.service";
 })
 export class ShowClicksComponent {
   value! : number
-  constructor(clicker : ClickerService){
+  constructor(private clicker : ClickerService){
     setInterval(() => {
       this.value = clicker.getValue()
     }, 10);
