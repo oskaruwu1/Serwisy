@@ -10,8 +10,6 @@ import { ClickerService } from "../../services/clicker.service";
 export class ShowClicksComponent {
   public getClicks():number{return 0}
   constructor(private clicker : ClickerService){
-    setInterval(() => {
-      this.getClicks = () => {return clicker.getValue()}
-    }, 10);
+    this.getClicks = () => {return clicker.getValue()}
   }
 }

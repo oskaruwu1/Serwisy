@@ -10,6 +10,7 @@ import { LoggerComponent } from './components/logger/logger.component';
 import { SwitchThemeComponent } from './components/switch-theme/switch-theme.component';
 import { ShowThemeComponent } from './components/show-theme/show-theme.component';
 import { TimerComponent } from './components/timer/timer.component';
+import { NotificationcenterComponent } from './components/notificationcenter/notificationcenter.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TimerComponent } from './components/timer/timer.component';
     LoggerComponent,
     SwitchThemeComponent,
     ShowThemeComponent,
-    TimerComponent
+    TimerComponent,
+    NotificationcenterComponent,
   ],
   imports: [
     BrowserModule,

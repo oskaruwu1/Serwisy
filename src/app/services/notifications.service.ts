@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Notification } from '../interfaces/notification';
-import { interval, Observable } from 'rxjs';
 import $ from 'jquery';
 
 @Injectable({
@@ -17,15 +16,22 @@ export class NotificationsService {
         id: this.id,
         message: message,
         priority: priority,
+        alive: true,
         delete(){
           setTimeout(() => {
-            $(`#notif${this.id}`)
-            // TUTAJ ZACZNIJ!!!!!!!
+            $(`#notif${this.id}`).css("animation", "loadOut 350ms forwards")
+            this.alive = false;
+            setTimeout(() => {
+              $(`#notif${this.id}`).remove()
+            }, 350);
           }, 10000);
-          return "";
+          return 1;
         }
       }
     )
+    this.notifications[this.notifications.length-1].delete()
+    this.id++
+    console.log(this.getNotifications())
   }
   getNotifications() : Notification[] {
     return this.notifications

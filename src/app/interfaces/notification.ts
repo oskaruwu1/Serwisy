@@ -4,5 +4,6 @@ export interface Notification {
     id: number,
     message: string,
     priority: "normal" | "high",
+    alive: boolean,
     delete: () => {}
 }
