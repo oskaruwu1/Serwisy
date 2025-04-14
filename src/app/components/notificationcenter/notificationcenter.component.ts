@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NotificationsService } from '../../services/notifications.service';
-import $ from 'jquery'
 
 @Component({
   selector: 'app-notificationcenter',

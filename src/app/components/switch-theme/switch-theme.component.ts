@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { NotificationsService } from '../../services/notifications.service';
 
 @Component({
   selector: 'app-switch-theme',
@@ -14,8 +15,8 @@ export class SwitchThemeComponent {
     'moon': 'https://img.icons8.com/?size=100&id=11377&format=png&color=B4AD00'
   }
   public getTheme(): string{return ""}
-  constructor(private themeService : ThemeService){
-    this.toggle = () => themeService.toggle()
+  constructor(private themeService : ThemeService, private notifications: NotificationsService){
+    this.toggle = () => {themeService.toggle(); notifications.add(`Zmieniono motyw na <b>${themeService.getTheme()}</b>`, "normal")}
     this.getTheme = () => {return themeService.getTheme()}
   }
 }

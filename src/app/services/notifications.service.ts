@@ -40,7 +40,6 @@ export class NotificationsService {
 
     this.notifications[this.notifications.length-1].delete()
     this.id++
-    console.log(this.getNotifications())
   }
   getNotifications() : Notification[] {
     return this.notifications
