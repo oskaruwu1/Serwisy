@@ -29,6 +29,15 @@ export class NotificationsService {
         }
       }
     )
+
+    $('#center').html('')
+    for (let item of this.getNotifications()) {
+      if (item.alive) {
+        $('#center').html($('#center').html() + `<div class="${item.priority}" id="notif${item.id}">${item.message}</div>`)
+      }
+    }
+    $('#center').children().last().css("animation", "loadIn 350ms forwards")
+
     this.notifications[this.notifications.length-1].delete()
     this.id++
     console.log(this.getNotifications())
